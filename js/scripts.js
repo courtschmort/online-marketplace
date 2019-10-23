@@ -2,7 +2,11 @@ $(document).ready(function() {
   $("body").on('click','button.product', function() {
     let productValue = $(this).val();
     $("ul#cart").append("<li class='list-group-item'>" + productValue + "</li>");
+    $("ul#cart").children("li").click(function() {
+      $(this).remove();
+    });
   });
+
   $("form#contact-information").submit(function(event) {
     event.preventDefault();
       let nameInput = $("#name").val();
