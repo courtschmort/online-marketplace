@@ -1,9 +1,20 @@
 $(document).ready(function() {
   $("body").on('click','button.product', function() {
     let productValue = $(this).val();
-    $("ul#cart").append("<li>" + productValue + "</li>");
-
-
+    $("ul#cart").append("<li class='list-group-item'>" + productValue + "</li>");
+  });
+  $("form#contact-information").submit(function(event) {
+    event.preventDefault();
+      let nameInput = $("#name").val();
+      let addressInput = $('#street-address').val();
+      let cityInput = $('#city').val();
+      let stateInput = $('#state').val();
+      let zipInput = $('#zip-code').val();
+    $("ul#delivery-info").append('<li>' + nameInput + '</li>');
+    $("ul#delivery-info").append('<li>' + addressInput + '</li>');
+    $("ul#delivery-info").append('<li>' + cityInput + '</li>');
+    $("ul#delivery-info").append('<li>' + stateInput + '</li>');
+    $("ul#delivery-info").append('<li>' + zipInput + '</li>');
   });
 
   // $("#product1").click(function() {

@@ -2,3 +2,7 @@ p.add-to-cart:hover {
   color: blue;
   text-decoration: underline;
 }
+ul#delivery-info {
+  list-style: none;
+  padding: 0;
+}
